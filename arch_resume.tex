@@ -1,0 +1,47 @@
+\documentclass[letterpaper,10pt,onecolumn]{article}
+
+\usepackage{resume}
+
+\def\name{Nicholas Kelly}
+\def\address{N/A\\ & Beaverton, OR}
+\def\mobile{N/A}
+\def\email{me@nickkelly.io}
+\def\website{www.nickkelly.io}
+
+\begin{document}
+
+\maketitle
+	
+\inlinesection{Objective}{To advance my education and experience in Computer Engineering so that I can contribute to the field of Computer Architecture.}
+
+\section*{Education}
+\import{sections/}{education.tex}
+
+\section*{Relevant Experience}
+\import{sections/experience/}{senior.tex}
+
+\section*{Qualifications}
+\inlinesubsection{Computer Arch.}{
+	\import{sections/qualifications/}{arch.tex}
+}
+\inlinesubsection{Software}{
+	\import{sections/qualifications/}{software.tex}
+}
+\inlinesubsection{Additional}{
+	\import{sections/qualifications/}{misc.tex}
+}
+
+\section*{Selected Projects}
+\inlinesubsection{Jan 2014 - June 2016}{
+	\import{sections/projects/}{arch.tex}
+}
+\inlinesubsection{Sept 2012 - Jun 2013}{
+	\import{sections/projects/}{vlsi.tex}
+}
+
+\section*{Publications}
+\import{sections/}{publications.tex}
+
+\paragraph{} ~\\
+\regfont References available on request. Additional experience and qualifications available in alternate (e.g. web) resumes.
+\end{document}

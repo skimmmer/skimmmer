@@ -1,0 +1,93 @@
+\usepackage{silence}
+\WarningsOff*
+
+\usepackage{xltxtra,fontspec,xunicode}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{nopageno}
+\usepackage{multirow}
+\usepackage{array,booktabs,arydshln,xcolor}
+\usepackage{tabularx}
+\usepackage{import}
+\newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+\geometry{textheight=10in, textwidth=7.5in}
+
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+
+\newfontfamily\titlefont[Path=./fonts/, Scale = 2]{Lato-Regular}
+\newfontfamily\thinfont[Path=./fonts/]{Lato-Thin}
+\newfontfamily\lightitalicfont[Path=./fonts/]{Lato-LightItalic}
+\newfontfamily\lightfont[Path=./fonts/]{Lato-Light}
+\newfontfamily\regfont[Path=./fonts/]{Lato-Regular}
+\newfontfamily\boldfont[Path=./fonts/]{Lato-Bold}
+
+\titleformat*{\section}{\Large\boldfont}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\usepackage{amssymb}
+\newenvironment{squarelist}
+{
+\setlength{\leftmargini}{20pt}
+\vspace{5pt}
+\begin{itemize}
+	\renewcommand{\labelitemi}{\rule[2pt]{3pt}{3pt}}
+	\setlength{\itemsep}{1pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{plainlist}
+{
+\setlength{\leftmargini}{0pt}
+\begin{itemize}
+	\renewcommand{\labelitemi}{}
+	\setlength{\itemsep}{5pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\renewcommand{\@maketitle}{
+	\flushleft
+	\begin{minipage}[l]{0.5\textwidth}
+		\titlefont \huge \name
+	\end{minipage}
+	\hfill
+	\lightfont \normalsize
+	\begin{tabular}{ r !{\VRule[1pt]} l }
+		\multirow{2}{*}{\emph{Address}} & \address \\
+		\emph{Mobile} & \mobile \\
+		\emph{Email} & \email \\
+		\emph{Website} & \website \\
+	\end{tabular}
+	\vspace{0.25in}
+}
+
+\newcommand{\inlinesection}[2]{
+	\flushleft
+	\begin{minipage}{1.5in}
+		\Large\boldfont#1 & 
+		\hspace{0.125in}
+	\end{minipage}
+	\begin{tabular}[t]{!{\VRule[1pt]}@{}p{5.5in}}
+		\hspace{0.125in}
+		\parbox[t]{5.5in}{\lightfont#2}
+	\end{tabular}
+	\\
+	\vspace{0.2in}
+}
+
+\newcommand{\inlinesubsection}[2]{
+	\begin{minipage}{1.5in}
+		\flushright\normalsize\lightitalicfont\emph{#1}
+		\hspace{0.125in}
+	\end{minipage}
+	\begin{tabular}[t]{!{\VRule[1pt]}@{}p{5.5in}}
+		\hspace{0.125in}
+		\parbox[t]{5.5in}{\lightfont#2}
+	\end{tabular}
+	\\
+	\vspace{0.2in}
+}
+

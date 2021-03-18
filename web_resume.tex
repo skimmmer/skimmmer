@@ -1,0 +1,44 @@
+\documentclass[letterpaper,10pt,onecolumn]{article}
+
+\usepackage{resume}
+
+\def\name{Nicholas Kelly}
+\def\address{N/A\\ & Beaverton, OR}
+\def\mobile{N/A}
+\def\email{me@nickkelly.io}
+\def\website{www.nickkelly.io}
+
+\begin{document}
+
+\maketitle
+	
+\inlinesection{Objective}{To advance my knowledge and experience within Web development and associated topics.}
+
+\section*{Education}
+\import{sections/}{education.tex}
+
+\section*{Relevant Experience}
+\import{sections/experience/}{web.tex}
+
+\section*{Qualifications}
+\inlinesubsection{Web Development}{
+	\import{sections/qualifications/}{web.tex}
+}
+\inlinesubsection{Software}{
+	\import{sections/qualifications/}{software.tex}
+}
+\inlinesubsection{Graphics}{
+	\import{sections/qualifications/}{graphics.tex}
+}
+\inlinesubsection{Additional}{
+	\import{sections/qualifications/}{misc.tex}
+}
+
+\section*{Selected Projects}
+\inlinesubsection{2009 - Present}{
+	\import{sections/projects/}{web.tex}
+}
+
+\paragraph{} ~\\
+\regfont References available on request. Additional experience and qualifications available in alternate resumes.
+\end{document}

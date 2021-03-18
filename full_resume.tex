@@ -1,0 +1,58 @@
+\documentclass[letterpaper,10pt,onecolumn]{article}
+
+\usepackage{resume}
+
+\def\name{Nicholas Kelly}
+\def\address{N/A\\ & Beaverton, OR}
+\def\mobile{N/A}
+\def\email{me@nickkelly.io}
+\def\website{www.nickkelly.io}
+
+\begin{document}
+
+\maketitle
+	
+\inlinesection{Objective}{To advance my education and experience in Computer/Electrical and Software engineering.}
+
+\section*{Education}
+\import{sections/}{education.tex}
+
+\section*{Experience}
+\import{sections/experience/}{senior.tex}
+\import{sections/experience/}{junior.tex}
+\import{sections/experience/}{web.tex}
+
+\section*{Qualifications}
+\inlinesubsection{Computer Arch.}{
+	\import{sections/qualifications/}{arch.tex}
+}
+\inlinesubsection{Software}{
+	\import{sections/qualifications/}{software.tex}
+}
+\inlinesubsection{Electrical}{
+	\import{sections/qualifications/}{electronics.tex}
+}
+\inlinesubsection{Web Development}{
+	\import{sections/qualifications/}{web.tex}
+}
+\inlinesubsection{Additional}{
+	\import{sections/qualifications/}{misc.tex}
+}
+
+\section*{Selected Projects}
+\inlinesubsection{Jan 2014 - June 2016}{
+	\import{sections/projects/}{arch.tex}
+}
+\inlinesubsection{Sept 2012 - Jun 2013}{
+	\import{sections/projects/}{vlsi.tex}
+}
+\inlinesubsection{2009 - Present}{
+	\import{sections/projects/}{web.tex}
+}
+
+\section*{Publications}
+\import{sections/}{publications.tex}
+
+\paragraph{} ~\\
+\regfont References available on request
+\end{document}
